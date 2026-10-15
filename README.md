@@ -10,7 +10,7 @@
 
 ## 👤 Sobre o Projeto
 
-Projeto solo desenvolvido por **Matheus Maia**. O fluxo de trabalho é experimental e conta com agentes de IA (Gemini e Claude) como assistentes no desenvolvimento — desde documentação até código GDScript.
+Projeto solo desenvolvido por **Andrade**. O fluxo de trabalho é experimental e conta com agentes de IA (Gemini e Claude) como assistentes no desenvolvimento — desde documentação até código GDScript.
 
 ---
 
