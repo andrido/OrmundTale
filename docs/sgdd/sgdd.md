@@ -1,36 +1,36 @@
 # 📜 SGDD — Simplified Game Design Document: Ormund Tale
 
-**Título do Jogo:** Ormund Tale  
+**Título:** Ormund Tale  
 **Gênero:** Metroidvania 2D / Ação em Plataforma com Elementos Soulslike  
 **Engine:** Godot 4.x (2D)  
-**Público-Alvo:** Jogadores fãs de Hollow Knight, Castlevania, Celeste e Dark Souls  
-**Status Atual:** Fase de Prototipagem & Validação de Física/Componentes  
+**Referências:** Hollow Knight, Castlevania, Celeste, Dark Souls  
+**Status:** Prototipagem — física e sistemas de componentes em validação
 
 ---
 
-## 1. Identidade e Mantra do Jogo
+## 1. Identidade do Jogo
 
 > **"Uma jornada cooperativa entre dois heróis improváveis, alternando magia ancestral e astúcia ladina para purificar um reino corrompido."**
 
-**Ormund Tale** é um jogo de plataforma e metroidvania focado na dinâmica de **dupla de protagonistas alternáveis em tempo real (Tag-Team)**. O jogador controla **Delphy** e **Bazz**, alternando entre eles com um toque de botão para superar obstáculos de travessia, desvendar caminhos bloqueados e enfrentar batalhas táticas contra aberrações e chefes trágicos.
+**Ormund Tale** é um metroidvania focado na dinâmica de **dupla de protagonistas alternáveis em tempo real (Tag-Team)**. O jogador controla **Delphy** e **Bazz**, trocando entre eles com um toque de botão para superar obstáculos, desvendar caminhos e enfrentar batalhas táticas contra aberrações e chefes trágicos.
 
 ---
 
 ## 2. Pilares de Design
 
-1. **Exploração Agradável & Interconectada:** Mapa rico em segredos, rotas alternativas e progressão orientada a habilidades (Metroidvania clássico).
-2. **Combate Satisfatório & Metódico:** Ataques com peso, janelas de esquiva/parry e gerenciamento de recursos (influência Soulslike).
-3. **Alternância Dinâmica (Dual-Hero Synergy):** Delphy e Bazz compartilham a mesma responsividade de base, mas oferecem soluções de combate e travessia completamente distintas.
-4. **Upgrades & Colecionáveis Gratificantes:** Saques, bestiário com cartas de monstros e evolução personalizada para cada herói.
-5. **História Cativante & Chefes Trágicos:** Inimigos corrompidos que possuem passado e que podem ser purificados através de rituais ou itens específicos.
-6. **Identidade Sonora & Visual Marcante:** Trilha sonora atmosférica e pixel art 2D expressivo com parallax.
-7. **Acessibilidade Inclusiva:** Modos para daltonismo, ajustes de interface e remapeamento integral de controles.
+1. **Exploração interconectada:** Mapa rico em segredos, rotas alternativas e progressão orientada a habilidades.
+2. **Combate com peso:** Ataques impactantes, esquiva/parry e gerenciamento de recursos — influência Soulslike.
+3. **Alternância dinâmica (Dual-Hero):** Delphy e Bazz compartilham a mesma base de física, mas têm ferramentas completamente distintas.
+4. **Upgrades e colecionáveis:** Bestiário com cartas de monstros e evolução personalizada por personagem.
+5. **Chefes trágicos:** Inimigos corrompidos com história — podem ser purificados em vez de apenas derrotados.
+6. **Identidade visual e sonora:** Pixel art 2D com parallax e trilha sonora atmosférica.
+7. **Acessibilidade:** Modos para daltonismo, ajustes de interface e remapeamento de controles.
 
 ---
 
-## 3. Dinâmica dos Protagonistas (Sistema Tag-Team)
+## 3. Os Protagonistas (Sistema Tag-Team)
 
-Ambos os personagens compartilham o mesmo **kit básico de física** (velocidade base de corrida, física de pulo, coyote time e jump buffer) para manter a fluidez de controle idêntica na troca. No entanto, seus poderes e ferramentas de travessia são únicos:
+Ambos compartilham o mesmo **kit base de física** (velocidade de corrida, pulo, coyote time, jump buffer) para que a troca seja fluida. Mas seus poderes são completamente diferentes:
 
 ```
                   ┌──────────────────────────────────────────────┐
@@ -51,48 +51,48 @@ Ambos os personagens compartilham o mesmo **kit básico de física** (velocidade
 ```
 
 ### 3.1. Delphy (A Sereia Conjuradora)
-- **Origem:** Ligada ao sagrado Deus-Peixe **Hamus**.
-- **Estilo de Jogo:** Conjuradora à distância e controle de grupo.
-- **Habilidades Especiais:**
-  - *Canto Hipnotizante:* Paralisa ou atordoa inimigos temporariamente, abrindo janelas de ataque.
-  - *Magias da Tempestade:* Rajadas de água e raios para dano em área e ativação de mecanismos elétricos/hídricos.
-- **Progressão / Upgrades:** Meditação e oferendas nas **Fontes do Deus-Peixe Hamus** espalhadas pelo mundo.
+- **Ligação:** Deus-Peixe **Hamus**.
+- **Estilo:** Conjuradora à distância e controle de grupo.
+- **Habilidades:**
+  - *Canto Hipnotizante:* Paralisa ou atordoa inimigos, abrindo janelas de ataque.
+  - *Magias da Tempestade:* Rajadas de água e raios — dano em área e ativação de mecanismos elétricos/hídricos.
+- **Progressão:** Meditação e oferendas nas **Fontes do Deus-Peixe Hamus** espalhadas pelo mundo.
 
 ### 3.2. Bazz (O Tiefling Ladino)
 - **Origem:** Especialista em infiltração, ferramentas e sobrevivência urbana.
-- **Estilo de Jogo:** Combate ágil corpo a corpo, ataques furtivos e utilidade vertical.
-- **Habilidades Especiais:**
+- **Estilo:** Combate ágil corpo a corpo, ataques furtivos e mobilidade vertical.
+- **Habilidades:**
   - *Adagas e Bestas:* Ataques rápidos de curto alcance e disparos precisos.
-  - *Grappling Hook (Gancho):* Fixação em anéis, galhos e superfícies especiais para alcançar novas alturas e cruzar abismos.
-- **Progressão / Upgrades:** Derrota inimigos e rouba/adapta suas armas e lâminas, aprimorando seu arsenal.
+  - *Grappling Hook:* Grampeia anéis, galhos e superfícies para alcançar novas alturas e cruzar abismos.
+- **Progressão:** Derrota inimigos e rouba/adapta suas armas, aprimorando o arsenal.
 
 ---
 
 ## 4. O Mundo e a Corrupção de Örmund
 
 ### 4.1. Tipos de Inimigos
-1. **Inimigos-Natos:** Bestas selvagens, predadores e criaturas que sempre foram hostis por natureza biológica.
-2. **Inimigos Corrompidos Menores:** Moradores e guardas dominados pela magia nefasta do Mago Maligno.
-3. **Bosses (Líderes Corrompidos):** Antigos campeões do reino (como um lendário Ferreiro, uma virtuosa Madre ou um renomado Bardo) distorcidos em monstros trágicos.
+1. **Inimigos-Natos:** Bestas e criaturas naturalmente hostis.
+2. **Inimigos Corrompidos:** Moradores e guardas dominados pela magia do Mago Maligno.
+3. **Chefes (Líderes Corrompidos):** Antigos campeões do reino — como um Ferreiro lendário, uma Madre virtuosa ou um Bardo renomado — distorcidos em monstros trágicos.
 
-### 4.2. A Mecânica de Purificação
-- Cada chefe possui padrões de ataque inspirados em seu ofício antes da corrupção.
-- O jogador poderá descobrir ou utilizar **Itens/Rituais de Purificação**, permitindo libertar a alma desses chefes em vez de apenas destruí-los, revelando diálogos secretos, recompensas e auxílio na reconstrução do mundo.
+### 4.2. Purificação
+- Cada chefe tem padrões de ataque que remetem ao seu ofício original.
+- Com **Itens ou Rituais de Purificação**, é possível libertar a alma do chefe em vez de matá-lo — revelando diálogos, recompensas e aliados para a reconstrução do mundo.
 
 ---
 
-## 5. Sistemas de Gameplay (Features Core)
+## 5. Sistemas de Gameplay
 
-| Sistema | Descrição Técnica |
+| Sistema | Descrição |
 | :--- | :--- |
-| **Tag-Team Swap** | Troca instantânea de personagem com animação ágil e persistência de posição/inércia. |
-| **Stamina & Defesa** | Esquiva com frames de invulnerabilidade (i-frames) e mecânica de Parry com janela de contra-ataque. |
-| **Bestiário de Cartas** | Álbum in-game onde inimigos dropam cartas colecionáveis com lore, estatísticas e bônus passivos. |
-| **Equipamentos** | 3 slots principais por herói: *Arma*, *Armadura* e *Acessório/Relíquia*. |
-| **Travessia & Locks** | Grappling Hook, Dash, Salto Duplo e Correntes Mágicas servindo de chaves para novas áreas. |
-| **Checkpoints & Morte** | Altares sagrados de descanso; penalidade soulslike de recuperação de essência no local da morte. |
+| **Tag-Team Swap** | Troca instantânea de personagem, preservando posição e inércia. |
+| **Stamina & Defesa** | Esquiva com i-frames e Parry com janela de contra-ataque. |
+| **Bestiário de Cartas** | Inimigos dropam cartas colecionáveis com lore, stats e bônus passivos. |
+| **Equipamentos** | 3 slots por herói: *Arma*, *Armadura* e *Acessório/Relíquia*. |
+| **Travessia & Locks** | Grappling Hook, Dash, Salto Duplo e Correntes Mágicas abrem novas áreas. |
+| **Checkpoints & Morte** | Altares sagrados de descanso; penalidade soulslike de recuperação no local da morte. |
 
 ---
 
-## 6. Referências Visuais e Artísticas
-As referências de pixel art, iluminação atmosférica e design de cenários estão documentadas em `assets/art_references/` (`ref_1.png` a `ref_17.png`).
+## 6. Referências Visuais
+As referências de pixel art, iluminação e cenário estão em `assets/art_references/` (`ref_1.png` a `ref_17.png`).
